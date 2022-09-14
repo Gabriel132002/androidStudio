@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 && ed03.getText().toString().isEmpty()){
                     Toast.makeText(MainActivity.this, "Campos não podem ficar vazios", Toast.LENGTH_SHORT).show();
                 }else{
-                    String texto = ed02.getText().toString()+"-"+ed03.getText().toString();
+                    String texto = ed02.getText().toString()+" - "+ed03.getText().toString();
                     nomes.add(texto);
                     adapter.notifyDataSetChanged();
                     lista.setAdapter(adapter);

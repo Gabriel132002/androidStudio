@@ -12,7 +12,7 @@ public class SegudaActivity extends AppCompatActivity {
 
     TextView nome, telefone;
     Button voltar;
-
+    String n, tel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,12 +20,14 @@ public class SegudaActivity extends AppCompatActivity {
 
         nome = findViewById(R.id.texto_nome);
         telefone = findViewById(R.id.texto_telefone);
-        voltar = findViewById(R.id.btnvoltar);
+        voltar = findViewById(R.id.button);
 
         //recebendo dados
         Intent dadosrecebidos = getIntent();
-        nome.setText("Nome: "+dadosrecebidos.getStringExtra("nome"));
-        telefone.setText("Telefone: "+dadosrecebidos.getStringExtra("telefone"));
+        n="Nome: "+  dadosrecebidos.getStringExtra("nome");
+        tel = dadosrecebidos.getStringExtra("telefone");
+        nome.setText(n);
+        telefone.setText("Telefone: "+tel);
 
         voltar.setOnClickListener(new View.OnClickListener() {
             @Override
