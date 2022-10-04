@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MotoqueiroFantasma"
+    android:background="@drawable/fire">
+
+    <ImageView
+        android:id="@+id/imageViewMtFantasma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/mffilme"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Motoqueiro Fantasma"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp"
+        android:textSize="25dp"
+        android:text="Johnny Blaze fazia acrobacias de
+        \nmoto em um circo, até que um dia
+        \nseu pai ficou muito doente, em
+        \ndesespero decicidiu fazer um pacto
+        \ncom diabo, em busca de uma
+        \nmelhora para seu pai
+        \nsó que ele teve um preço a pagar por
+        \nfazer o pacto"
+        android:textColor="@color/black"
+        />
+
+    <Button
+        android:id="@+id/btnMotoqueiroVoltarCatalogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/black"
+        android:text="Voltar"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nota dos críticos 97/100"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:textSize="25dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        />
+</RelativeLayout>

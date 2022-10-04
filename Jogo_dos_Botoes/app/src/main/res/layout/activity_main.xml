@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtExterminador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encontre o Exterminador"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="650dp"
+         />
+
+    <include layout="@layout/botoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="450dp"
+        />
+    <include layout="@layout/botoespt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="400dp"
+         />
+
+    <include
+        layout="@layout/botoespt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="350dp" />
+
+    <include layout="@layout/botoespt4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="300dp"
+        />
+
+    <include layout="@layout/botoespt5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="250dp"
+        />
+    <include layout="@layout/botoespt6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="200dp"
+        />
+    <include layout="@layout/botoespt7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="150dp"
+        />
+    <include layout="@layout/botoespt8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        />
+    <TextView
+        android:id="@+id/txtmostrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtExterminador"
+        android:layout_marginTop="-600dp"
+        android:layout_centerHorizontal="false"
+        android:text=""
+        android:textSize="25dp"
+        android:layout_marginLeft="40dp"
+        />
+
+</RelativeLayout>

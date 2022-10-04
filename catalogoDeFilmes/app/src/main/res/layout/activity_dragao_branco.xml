@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DragaoBranco"
+    android:background="@drawable/whitdragon">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="O Grande Dragão Branco"
+        android:layout_marginTop="40dp"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        />
+
+    <ImageView
+        android:id="@+id/imageViewDgBranco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/vandammepose"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp"
+        android:text="Frank Dux é um militar que decidiu
+        \nser aluno de um mestre de artes
+        \nmarciais, se tornou um mestre e então decidiu entrar em um torneio,
+        \nenfrentando novos desafios perigosos"
+        android:textColor="@color/black"
+        />
+
+    <Button
+        android:id="@+id/btnDragaoBrancoVoltarCatalogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/black"
+        android:text="Voltar"
+        />
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nota dos críticos 94/100"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:textSize="25dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        />
+
+</RelativeLayout>

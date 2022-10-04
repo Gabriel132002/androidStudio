@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Jokenpo">
+
+    <TextView
+        android:id="@+id/txtjokenpo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Escolha do aplicativo"
+        android:textSize="40dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageViewPadrao"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtjokenpo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/padrao" />
+
+
+    <ImageView
+        android:id="@+id/imageViewPapel"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="305dp"
+        app:srcCompat="@drawable/papel" />
+
+    <ImageView
+        android:id="@+id/imageViewPedra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="290dp"
+        android:layout_marginRight="285dp"
+        app:srcCompat="@drawable/pedra" />
+
+    <ImageView
+        android:id="@+id/imageViewTesoura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="285dp"
+        android:layout_marginTop="300dp"
+        app:srcCompat="@drawable/tesoura"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha do Jogador"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="280dp"
+        android:textSize="30dp"
+        />
+    <Button
+        android:id="@+id/btnPPTVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/black"
+        android:layout_centerHorizontal="true"
+        android:text="Voltar"
+        />
+    <TextView
+        android:id="@+id/txtResultadoJokenpo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="150dp"
+        android:textSize="30dp"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/btnA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tela 1"
+        android:layout_marginLeft="20dp"
+        />
+
+    <Button
+        android:id="@+id/btnB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calendário"
+        android:layout_marginLeft="20dp"
+        />
+
+    <Button
+        android:id="@+id/btnC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tela 2"
+        android:layout_marginHorizontal="20dp"
+        />
+
+</LinearLayout>

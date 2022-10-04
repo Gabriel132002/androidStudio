@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaRocky"
+    android:background="@drawable/rocky">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Rocky Balboa"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        />
+
+    <ImageView
+        android:id="@+id/imageViewRocky"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/rockychapeu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp"
+        android:text="Para combater o bullying que sofria de todas as pessoas, Rocky decidiu
+        \ncomeçar a treinar boxe para melhorar sua autoestima, virando
+        \nassim uns dos maiores lutadores
+        \nde toda a história do boxe."
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="90dp"
+        android:layout_alignParentBottom="true"
+        android:text="Nota dada pelos críticos 95/100"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        />
+
+    <Button
+        android:id="@+id/btnRockyVoltarCatalogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/black"
+        android:text="Voltar"
+        />
+
+</RelativeLayout>

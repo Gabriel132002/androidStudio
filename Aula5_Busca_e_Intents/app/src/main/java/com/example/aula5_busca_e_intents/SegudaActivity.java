@@ -13,6 +13,7 @@ public class SegudaActivity extends AppCompatActivity {
     TextView nome, telefone;
     Button voltar;
     String n, tel;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
