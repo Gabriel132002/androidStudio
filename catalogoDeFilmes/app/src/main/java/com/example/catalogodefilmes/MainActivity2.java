@@ -23,6 +23,7 @@ public class MainActivity2 extends AppCompatActivity {
     String busca;
     ArrayAdapter adapter;
     Button btnVoltar;
+    Boolean aperta=true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,19 +49,19 @@ public class MainActivity2 extends AppCompatActivity {
         adapter = new ArrayAdapter(MainActivity2.this, android.R.layout.simple_list_item_1, filmes);
         lstFilmes.setAdapter(adapter);
 
+
         lstFilmes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String valor = adapter.getItem(i).toString();
+                if(aperta){
+                    Toast.makeText(MainActivity2.this, "Clicou no filme: "+filmes.get(i), Toast.LENGTH_SHORT).show();
+                }
 
-
-                Intent e = new Intent(MainActivity2.this, Tela3.class);
-                startActivity(e);
-                finish();
             }
         });
 
         busca = edtxtBusca.getText().toString();
+
         edtxtBusca.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -75,6 +76,14 @@ public class MainActivity2 extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable editable) {
+
+            }
+
+        });
+
+        edtxtBusca.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
             }
         });
