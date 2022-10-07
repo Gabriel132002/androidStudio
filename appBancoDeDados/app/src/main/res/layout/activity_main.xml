@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aula 9 - CRUD"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        />
+
+    <EditText
+        android:id="@+id/edCodigo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Código"
+        android:enabled="false"
+        android:layout_below="@+id/txtTitulo"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:id="@+id/edNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome"
+        android:layout_below="@+id/edCodigo"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"
+        />
+
+    <EditText
+        android:id="@+id/edNumero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Número"
+        android:layout_below="@+id/edNome"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"
+        />
+
+    <EditText
+        android:id="@+id/edTipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tipo"
+        android:layout_below="@+id/edNumero"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"
+        />
+
+    <include
+        android:id="@+id/gpBtn"
+        layout="@layout/grupo_botoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edTipo"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        />
+
+    <ListView
+        android:id="@+id/lista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gpBtn"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        />
+
+
+</RelativeLayout>
