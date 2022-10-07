@@ -2,6 +2,7 @@ package com.example.catalogodefilmes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -21,20 +22,31 @@ public class DragaoBranco extends AppCompatActivity {
         R.drawable.drgbrcfinal,
     };
     int index;
-    Button btnVoltar;
+    Button btnInicio, btnCatalogo;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dragao_branco);
 
         imgrandom = findViewById(R.id.imageViewDgBranco);
-        btnVoltar = findViewById(R.id.btnDragaoBrancoVoltarCatalogo);
+        btnInicio = findViewById(R.id.btnDragaoBrancoVoltarCatalogo);
+        btnCatalogo = findViewById(R.id.btnDragaoBrancoVoltarInicio);
 
         index = new Random().nextInt(gerar.length);
         imgrandom.setImageResource(gerar[index]);
 
-        btnVoltar.setOnClickListener(new View.OnClickListener() {
+        btnInicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(DragaoBranco.this, MainActivity2.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        btnCatalogo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(DragaoBranco.this, MainActivity.class);

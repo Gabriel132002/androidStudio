@@ -2,6 +2,7 @@ package com.example.catalogodefilmes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -21,20 +22,23 @@ public class TelaRocky extends AppCompatActivity {
             R.drawable.rockypose,
     };
     int index;
-    Button btnvoltar;
+    Button btnvoltarInicio, btnVoltarCatalogo;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_rocky);
 
-        btnvoltar = findViewById(R.id.btnRockyVoltarCatalogo);
+        btnVoltarCatalogo = findViewById(R.id.btnRockyVoltarCatalogo);
+        btnvoltarInicio = findViewById(R.id.btnRockyInicio);
+
         imgrandom = findViewById(R.id.imageViewRocky);
 
         index = new Random().nextInt(gerarimg.length);
         imgrandom.setImageResource(gerarimg[index]);
 
-        btnvoltar.setOnClickListener(new View.OnClickListener() {
+        btnvoltarInicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(TelaRocky.this, MainActivity.class);
@@ -43,6 +47,14 @@ public class TelaRocky extends AppCompatActivity {
             }
         });
 
+        btnVoltarCatalogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(TelaRocky.this, MainActivity2.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
     }
 }
