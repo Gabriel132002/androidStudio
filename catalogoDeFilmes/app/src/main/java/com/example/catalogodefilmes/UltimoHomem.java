@@ -2,6 +2,7 @@ package com.example.catalogodefilmes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -21,8 +22,9 @@ public class UltimoHomem extends AppCompatActivity {
             R.drawable.ultmencurativos,
             R.drawable.ultmenpelotao
     };
-    Button btnvoltar;
+    Button btnvoltar, btnInicio;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +32,7 @@ public class UltimoHomem extends AppCompatActivity {
 
         imgrandom = findViewById(R.id.imageViewUltimoHomem);
         btnvoltar = findViewById(R.id.btnUltimoHomemVoltarCatalogo);
+        btnInicio = findViewById(R.id.btnUltimoHomemVoltarInicio);
 
         int index = new Random().nextInt(gerar.length);
         imgrandom.setImageResource(gerar[index]);
@@ -38,6 +41,15 @@ public class UltimoHomem extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(UltimoHomem.this, MainActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        btnInicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(UltimoHomem.this, MainActivity2.class);
                 startActivity(i);
                 finish();
             }

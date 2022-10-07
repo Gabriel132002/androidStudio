@@ -15,7 +15,7 @@
         android:textSize="30dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="650dp"
-         />
+        />
 
     <include layout="@layout/botoes"
         android:layout_width="wrap_content"
@@ -30,7 +30,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="400dp"
-         />
+        />
 
     <include
         layout="@layout/botoespt3"
@@ -86,6 +86,17 @@
         android:text=""
         android:textSize="25dp"
         android:layout_marginLeft="40dp"
+        />
+
+    <Button
+        android:id="@+id/btnPrincipalVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/black"
+        android:text="Voltar ao menu"
         />
 
 </RelativeLayout>

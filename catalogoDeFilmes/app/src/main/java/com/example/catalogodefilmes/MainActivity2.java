@@ -53,9 +53,7 @@ public class MainActivity2 extends AppCompatActivity {
         lstFilmes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                if(aperta){
-                    Toast.makeText(MainActivity2.this, "Clicou no filme: "+filmes.get(i), Toast.LENGTH_SHORT).show();
-                }
+            lstFilmes.getItemAtPosition(i);
 
             }
         });

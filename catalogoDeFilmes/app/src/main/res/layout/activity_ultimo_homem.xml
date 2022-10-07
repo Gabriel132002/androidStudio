@@ -35,11 +35,11 @@
         android:id="@+id/btnUltimoHomemVoltarCatalogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
         android:layout_marginBottom="20dp"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
         android:backgroundTint="@color/black"
-        android:text="Voltar"
+        android:text="Voltar ao inicio"
         />
 
     <ImageView
@@ -60,6 +60,17 @@
         android:textSize="25dp"
         android:layout_centerHorizontal="true"
             android:textColor="@color/black"
+        />
+
+    <Button
+        android:id="@+id/btnUltimoHomemVoltarInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/black"
+        android:text="Voltar ao catálogo"
         />
 
 </RelativeLayout>
