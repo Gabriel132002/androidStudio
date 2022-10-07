@@ -44,7 +44,7 @@ public class MainActivity2 extends AppCompatActivity {
         filmes.add("O Homem de Aço");
         filmes.add("Sônic");
         filmes.add("Rambo");
-        filmes.add("Os Mercenários 2");
+        filmes.add("Karatê Kid");
 
         adapter = new ArrayAdapter(MainActivity2.this, android.R.layout.simple_list_item_1, filmes);
         lstFilmes.setAdapter(adapter);
@@ -53,12 +53,59 @@ public class MainActivity2 extends AppCompatActivity {
         lstFilmes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-            lstFilmes.getItemAtPosition(i);
+            if (i==0){
+                Intent ext = new Intent(MainActivity2.this, Tela3.class);
+                startActivity(ext);
+                finish();
+            }
+            if (i==1){
+                Intent rb = new Intent(MainActivity2.this, TelaRocky.class);
+                startActivity(rb);
+                finish();
+            }
+            if (i==2){
+                Intent ath = new Intent(MainActivity2.this, UltimoHomem.class);
+                startActivity(ath);
+                finish();
+            }
+            if (i==3){
+                Intent db = new Intent(MainActivity2.this, DragaoBranco.class);
+                startActivity(db);
+                finish();
+            }
+            if (i==4){
+                Intent mf = new Intent(MainActivity2.this, MotoqueiroFantasma.class);
+                startActivity(mf);
+                finish();
+            }
+            if (i==5){
+                Intent spm = new Intent(MainActivity2.this, SpiderMan2.class);
+                startActivity(spm);
+                finish();
+            }
+            if (i==6){
+                Intent supm = new Intent(MainActivity2.this, HomenDeAco.class);
+                startActivity(supm);
+                finish();
+            }
+            if (i==7){
+                Intent sonic = new Intent(MainActivity2.this, Sonic.class);
+                startActivity(sonic);
+                finish();
+            }
+            if (i==8){
+                    Intent rambo = new Intent(MainActivity2.this, Rambo.class);
+                    startActivity(rambo);
+                    finish();
+                }
+            if (i==9){
+                Intent kid = new Intent(MainActivity2.this, KarateKid.class);
+                startActivity(kid);
+                finish();
+            }
 
             }
         });
-
-        busca = edtxtBusca.getText().toString();
 
         edtxtBusca.addTextChangedListener(new TextWatcher() {
             @Override
@@ -77,13 +124,6 @@ public class MainActivity2 extends AppCompatActivity {
 
             }
 
-        });
-
-        edtxtBusca.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
         });
 
         btnVoltar.setOnClickListener(new View.OnClickListener() {

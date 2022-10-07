@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomenDeAco"
+    android:background="@drawable/superpaper"
+    >
+
+    <ImageView
+        android:id="@+id/imgSuperMan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/supertribunal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="25dp"
+        android:layout_centerHorizontal="true"
+        android:text="Homen de Aço"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="380dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:text="Nascido num planeta distante chamado
+        \nKrypton, à beira do collapso, Kal-El é enviado
+        \nao planeta Terra como uma forma de manter
+        \nsua raça viva, porém a vida que Clark Kent
+        \nleva mostrar que mesmo sendo muito
+        \npoderoso encontra muitos desafios"
+        android:textColor="@color/black"
+        />
+
+    <Button
+        android:id="@+id/btnSuperCatalogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/black"
+        android:text="Voltar ao catálogo"
+        />
+
+    <Button
+        android:id="@+id/btnSuperInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/black"
+        android:text="Voltar ao inicio"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="90dp"
+        android:layout_centerHorizontal="true"
+        android:text="Nota dada pelos críticos: 98/100"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        />
+
+</RelativeLayout>
