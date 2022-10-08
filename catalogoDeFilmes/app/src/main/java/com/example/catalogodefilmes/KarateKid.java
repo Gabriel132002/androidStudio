@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.Random;
 
@@ -14,6 +15,7 @@ public class KarateKid extends AppCompatActivity {
 
     Button btnInicio, btnCatalogo;
     ImageView imgRandom;
+    TextView txtTitulo;
     int gerar [] = {
             R.drawable.karatedaniel,
             R.drawable.karatefinal,
@@ -30,9 +32,12 @@ public class KarateKid extends AppCompatActivity {
         btnCatalogo = findViewById(R.id.btnKarateCatalogo);
         btnInicio = findViewById(R.id.btnKarateInicio);
         imgRandom = findViewById(R.id.imgKarate);
+        txtTitulo = findViewById(R.id.txtTituloKid);
 
         int index = new Random().nextInt(gerar.length);
         imgRandom.setImageResource(gerar[index]);
+
+        txtTitulo.setText(getIntent().getStringExtra("kid"));
 
         btnInicio.setOnClickListener(new View.OnClickListener() {
             @Override

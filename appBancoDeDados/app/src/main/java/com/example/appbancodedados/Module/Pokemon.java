@@ -15,6 +15,12 @@ public class Pokemon {
         this.numero = numero;
     }
 
+    public Pokemon(String nome, String tipo, String numero) {
+        this.nome = nome;
+        this.tipo = tipo;
+        this.numero = numero;
+    }
+
     public int getCod() {
         return cod;
     }

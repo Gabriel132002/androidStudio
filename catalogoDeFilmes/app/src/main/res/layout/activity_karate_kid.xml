@@ -18,14 +18,14 @@
         />
 
     <TextView
+        android:id="@+id/txtTituloKid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:textColor="@color/white"
-        android:textSize="30dp"
         android:text="Karatê Kid"
-        />
+        android:textColor="@color/white"
+        android:textSize="30dp" />
 
     <TextView
         android:layout_width="wrap_content"

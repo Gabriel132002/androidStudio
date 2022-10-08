@@ -1,5 +1,6 @@
 package com.example.appbancodedados.Controller;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.DatabaseErrorHandler;
@@ -10,6 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.appbancodedados.Module.Pokemon;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PokemonDataBase extends SQLiteOpenHelper {
 
@@ -57,6 +61,55 @@ public class PokemonDataBase extends SQLiteOpenHelper {
                 cursor.getString(2),
                 cursor.getString(3));
         return pkn;
+    }
+
+    public void addPokemon (Pokemon pkn){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(c_nome, pkn.getNome());
+        values.put(c_numero, pkn.getNumero());
+        values.put(c_tipo, pkn.getTipo());
+
+        db.insert(tb_pokemon, null, values);
+        db.close();
+    }
+
+    public void excluirPokemon (Pokemon pkn){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(tb_pokemon, c_cod+" = ?", new String[]{String.valueOf(pkn.getCod())});
+        db.close();
+    }
+
+    public List <Pokemon> listarPokemons(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        List <Pokemon> pknLista = new ArrayList<>();
+
+        String query = "SELECT * FROM "+tb_pokemon;
+        Cursor cursor = db.rawQuery(query, null);
+
+        if(cursor.moveToFirst()){
+            do {
+                Pokemon pkn = new Pokemon();
+                pkn.setCod(Integer.parseInt(cursor.getString(0)));
+                pkn.setNome(cursor.getString(1));
+                pkn.setTipo(cursor.getString(2));
+                pkn.setNumero(cursor.getString(3));
+                pknLista.add(pkn);
+            }while (cursor.moveToNext());
+        }
+
+        return pknLista;
+    }
+
+    public void updatePokemon(Pokemon pkn){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(c_nome, pkn.getNome());
+        values.put(c_numero, pkn.getNumero());
+        values.put(c_tipo, pkn.getTipo());
+        db.update(tb_pokemon, values, c_cod + " = ?", new String[]{String.valueOf(pkn.getCod())});
+        db.close();
     }
 
     @Override
