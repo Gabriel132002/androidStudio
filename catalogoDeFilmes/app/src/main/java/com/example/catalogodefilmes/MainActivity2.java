@@ -46,6 +46,9 @@ public class MainActivity2 extends AppCompatActivity {
         filmes.add("Rambo");
         filmes.add("Karatê Kid");
 
+        adapter = new ArrayAdapter(MainActivity2.this, android.R.layout.simple_list_item_1, filmes);
+        lstFilmes.setAdapter(adapter);
+
 
         lstFilmes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -97,16 +100,12 @@ public class MainActivity2 extends AppCompatActivity {
                 }
             if (i==9){
                 Intent kid = new Intent(MainActivity2.this, KarateKid.class);
-                kid.putExtra("kid", "kid teste1 teste2");
                 startActivity(kid);
                 finish();
             }
 
             }
         });
-
-        adapter = new ArrayAdapter(MainActivity2.this, android.R.layout.simple_list_item_1, filmes);
-        lstFilmes.setAdapter(adapter);
 
         edtxtBusca.addTextChangedListener(new TextWatcher() {
             @Override

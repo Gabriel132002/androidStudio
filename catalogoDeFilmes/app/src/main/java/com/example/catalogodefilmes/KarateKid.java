@@ -37,8 +37,6 @@ public class KarateKid extends AppCompatActivity {
         int index = new Random().nextInt(gerar.length);
         imgRandom.setImageResource(gerar[index]);
 
-        txtTitulo.setText(getIntent().getStringExtra("kid"));
-
         btnInicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
