@@ -34,27 +34,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Calendar c = Calendar.getInstance();
-        int dia = c.get(Calendar.DAY_OF_MONTH);
-        int mes = c.get(Calendar.MONTH);
-        int ano = c.get(Calendar.YEAR);
-
-
-
-//        private void nascimento () {
-//            Calendar c = Calendar.getInstance();
-//            int dia = c.get(Calendar.DAY_OF_MONTH);
-//            int mes = c.get(Calendar.MONTH);
-//            int ano = c.get(Calendar.YEAR);
-//
-//            DatePickerDialog datePickerDialog = new DatePickerDialog(MainActivity.this, new DatePickerDialog.OnDateSetListener() {
-//                @Override
-//                public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
-//                    edNascimento.setText(i+"/"+(i1+1)+"/"+i2);
-//                }
-//            }, ano, mes, dia);
-//            datePickerDialog.show();
-//        }
-
     }
 }
