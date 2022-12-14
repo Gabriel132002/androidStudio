@@ -51,28 +51,60 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:layout_margin="10dp"
-        android:hint="Digite o nome do local"
-        />
+        android:hint="Digite o nome do local" />
+
+
 
     <Button
-        android:id="@+id/btnpesquisar"
+        android:id="@+id/btn_mostrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pesquisar"
-        android:layout_below="@+id/edText"
-        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:backgroundTint="#223BE1"
-        android:onClick="get"
+        android:text="Mostar todos"
         />
 
-<!--    <ListView-->
-<!--        android:id="@+id/lstDados"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="200dp"-->
+    <ListView
+        android:id="@+id/lstDados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_above="@+id/btn_mostrar"
+        android:layout_marginBottom="10dp"
+        />
 
-<!--        />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edText"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/btnpesquisar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pesquisar"
+            android:layout_below="@+id/edText"
+            android:layout_marginLeft="25dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#223BE1"
+            />
+
+        <Button
+            android:id="@+id/btn_salvar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edText"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#223BE1"
+            android:layout_marginLeft="60dp"
+            android:text="Salvar cidade"
+            />
+
+    </LinearLayout>
+
 
 
 </RelativeLayout>

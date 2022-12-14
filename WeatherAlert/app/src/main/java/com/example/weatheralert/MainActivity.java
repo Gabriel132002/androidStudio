@@ -21,6 +21,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.weatheralert.Controller.DataBaseHelper;
+import com.example.weatheralert.Model.Weather;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -32,9 +34,13 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     EditText edtxt;
-    Button btnpsq;
+    Button btnpsq, btnmostrar, btnSalvar;
+    ListView lstDados;
     TextView txtDados;
     String text;
+    DataBaseHelper bdCities = new DataBaseHelper(this);
+    ArrayList<Integer> arrayList;
+    ArrayAdapter<Integer> adapter;
 
 
     @Override
@@ -44,15 +50,31 @@ public class MainActivity extends AppCompatActivity {
 
         btnpsq = findViewById(R.id.btnpesquisar);
         edtxt = findViewById(R.id.edText);
+        lstDados = findViewById(R.id.lstDados);
         txtDados = findViewById(R.id.txtdados);
+        btnmostrar = findViewById(R.id.btn_mostrar);
+        btnSalvar = findViewById(R.id.btn_salvar);
 
+        btnSalvar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-//        btnpsq.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//            }
-//        });
+            }
+        });
+
+        btnpsq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                get(view);
+            }
+        });
+
+        btnmostrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listCities();
+            }
+        });
 
     }
 
@@ -84,6 +106,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         queue.add(request);
+    }
+
+    private void listCities(){
+        List <Weather> wth = bdCities.listWeather();
+        arrayList = new ArrayList<Integer>();
+        adapter = new ArrayAdapter<Integer>(MainActivity.this, R.layout.activity_main,arrayList);
+        lstDados.setAdapter(adapter);
+
+        for(Weather wt: wth){
+            arrayList.add(wt.getWeather());
+            adapter.notifyDataSetChanged();
+        }
     }
 
 }
