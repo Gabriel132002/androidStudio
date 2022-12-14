@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -66,13 +67,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 get(view);
+                limparCampos();
             }
         });
 
         btnmostrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                listCities();
+
             }
         });
 
@@ -94,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
                     Double temp = Double.parseDouble(temperature)-273.15;
 
                     txtDados.setText("Temperatura em "+city+" = "+temp.toString().substring(0,5)+"°c");
+                    
 
                 } catch (JSONException e) {
                     Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -118,6 +121,11 @@ public class MainActivity extends AppCompatActivity {
             arrayList.add(wt.getWeather());
             adapter.notifyDataSetChanged();
         }
+    }
+
+    private void limparCampos(){
+        edtxt.setText("");
+        edtxt.requestFocus();
     }
 
 }
